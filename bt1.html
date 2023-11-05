@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7en Contients</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">7en Continents.</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" onsubmit="scrollToSearchedCard(); return false;">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+
+              <script>
+                function scrollToSearchedCard() {
+                  // Get the search input value
+                  var searchTerm = document.getElementById('searchInput').value.toLowerCase(); // Convert the search term to lowercase for case-insensitive comparison
+              
+                  // Define an object to map search terms to card IDs
+                  var cardMap = {
+                    'asia': 'asia',
+                    'antarctica': 'antarctica',
+                    'south america': 'south-america',
+                    'north america': 'north-america',
+                    'europe': 'europe',
+                    'australia': 'australia',
+                    'africa': 'africa'
+                  };
+              
+                  // Check if the search term exists in the card map
+                  if (cardMap[searchTerm]) {
+                    // Scroll to the card with the specified ID
+                    var cardElement = document.getElementById(cardMap[searchTerm]);
+                    if (cardElement) {
+                      cardElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                }
+              </script>
+              
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://as1.ftcdn.net/v2/jpg/03/24/48/90/1000_F_324489064_SFmTFTYUVG8SS6JuzJLxYVg9P7X1xBFF.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/23/56/94/1000_F_623569473_csi6EIpketemxExZhVHk56TQtpAUtMPx.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://as2.ftcdn.net/v2/jpg/06/17/14/61/1000_F_617146187_CNoWAe5KttjKYYwKbCiiEDxL8MDZuwWi.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" id ="europe">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/79/60/28/1000_F_579602818_ZjglF20Gd8xeWWYkdOVz82lRQtCaiaKi.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Europe</h5>
+              <p class="card-text"> steeped in history, offers a blend of ancient charm</p>
+              <a href="#" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card" id ="asia">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/49/70/54/1000_F_649705443_3nVgzJTHosKUN0KPRu7wWvr7vlZvHcfD.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Asia</h5>
+              <p class="card-text"> From Himalayan peaks to the bustling cities of Tokyo & Mumbai.</p>
+              <a href="https://www.nationalgeographic.com/travel/destination/asia" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card" id = "antarctica">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/09/21/22/1000_F_609212239_Bat8j7rGnNkSH7FljRPHSwL56uzE8usi.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Antarctica</h5>
+              <p class="card-text">Home to unique ecosystems and scientific research stations.</p>
+              <a href="https://www.nationalgeographic.com/expeditions/destinations/polar/ocean/antarctica-cruise/" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" id = "africa">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/58/77/24/1000_F_558772484_9nvkeNkkb0XChCVIUnsSN1ph8T6KkmU9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Africa</h5>
+              <p class="card-text">Continent known for its stunning wildlife, cultural richness, and varied landscapes.</p>
+              <a href="https://www.nationalgeographic.com/expeditions/destinations/africa/" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card" id = "north america">
+            <img src="https://as2.ftcdn.net/v2/jpg/03/97/07/45/1000_F_397074521_QyoouGR3k5sAk0KWSpizOgv7hKNghljx.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">North America</h5>
+              <p class="card-text">Land of natural wonders, from the Grand Canyon to the Rocky Mountains.</p>
+              <a href="https://www.nationalgeographic.com/travel/destination/north-america" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card" id = "south america">
+            <img src="https://as1.ftcdn.net/v2/jpg/05/53/60/20/1000_F_553602081_PN041ysJVjMgmymTKZI4iHs6bQn6GvDu.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">South America</h5>
+              <p class="card-text">Featuring the Amazon Rainforest, Andes Mountains, and Incan ruins.</p>
+              <a href="https://www.nationalgeographic.com/expeditions/destinations/south-america/" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" id ="australia">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/29/96/14/1000_F_629961439_lgnhhCzpmlMF99bOT6bxn7hK9fB3MrID.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Australia</h5>
+              <p class="card-text">Renowned for its unique wildlife, stunning coastlines, and the vast Outback desert.</p>
+              <a href="https://www.nationalgeographic.com/expeditions/destinations/australia-pacific/australia/" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <hr/>
+        <div>
+            <h6><i>Made by me 😁</i></h6>
+        </div>
+                            
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
